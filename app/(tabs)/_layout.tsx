@@ -13,6 +13,7 @@ export default function TabsLayout(){
                 backgroundColor: "black",
                 borderTopColor: "black",
                 borderTopWidth: 1,
+                elevation: 0,
                 position: "absolute",
                 bottom: 0,
                 left: 0,
@@ -20,7 +21,9 @@ export default function TabsLayout(){
                 height: 50,
                 paddingBottom: 10,
             }
-        }}>
+        }}
+            
+        >
             <Tabs.Screen name="index" options={{title: "Home", headerShown: false, tabBarIcon: ({color, size}) => (
                 <Ionicons name="home" color={color} size={size} />
             )}}/>
