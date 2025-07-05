@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function Index() {
   const [loading, setLoading] = useState(true);
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
 //   useEffect(() => {
 //     const checkAuth = async () => {
