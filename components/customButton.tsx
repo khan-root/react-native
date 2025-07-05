@@ -5,20 +5,22 @@ import { twMerge } from "tailwind-merge";
 type Variant = "primary" | "secondary" | "outline";
 
 type Props = {
-  title: string;
+  // title: string;
   onPress: () => void;
   variant?: Variant;
   className?: string;
   textClassName?: string;
+  children?: React.ReactNode;
 } & TouchableOpacityProps;
 
 export default function CustomButton({
-  title,
+  // title,
   onPress,
   variant = "primary",
   className = "",
   textClassName = "",
-  ...rest
+  children,
+  ...props
 }: Props) {
   const baseButton = "py-3 px-4 rounded-lg items-center";
   const baseText = "text-base font-semibold";
@@ -39,10 +41,10 @@ export default function CustomButton({
     <TouchableOpacity
       onPress={onPress}
       className={twMerge(clsx(baseButton, variantButton[variant]), className)}
-      {...rest}
+        {...props}
     >
       <Text className={twMerge(clsx(baseText, variantText[variant]), textClassName)}>
-        {title}
+        {children}
       </Text>
     </TouchableOpacity>
   );

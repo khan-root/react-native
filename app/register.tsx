@@ -63,11 +63,18 @@ export default function Register(){
                 flexDirection: "column",
                 gap: 10
             }}>
-                <CustomButton title="Register" onPress={handleRegister} 
-                    // className="bg-black text-white "
+                <CustomButton
+                    onPress={handleRegister} 
+                    className="bg-black text-white "
                     variant="outline"
-                />
-                <CustomButton title="Sign In" onPress={()=> router.push("/signin")} />
+                >
+                    Register
+                </CustomButton>
+                <CustomButton
+                    onPress={()=> router.push("/signin")}
+                >
+                    Sigin
+                </CustomButton>
             </View>
         </View>
     )
