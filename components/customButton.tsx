@@ -5,7 +5,6 @@ import { twMerge } from "tailwind-merge";
 type Variant = "primary" | "secondary" | "outline";
 
 type Props = {
-  // title: string;
   onPress: () => void;
   variant?: Variant;
   className?: string;
@@ -14,7 +13,6 @@ type Props = {
 } & TouchableOpacityProps;
 
 export default function CustomButton({
-  // title,
   onPress,
   variant = "primary",
   className = "",
